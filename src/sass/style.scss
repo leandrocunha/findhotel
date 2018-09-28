@@ -1,0 +1,23 @@
+@import 'normalize/import-now';
+
+// Font Family
+$Helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//colors
+$black: #000;
+$blue: #4f94dc;
+$white: #fff;
+
+$primary: $blue;
+
+// Media Queries
+$desktop: 1024px;
+$tablet: 720px;
+
+body {
+  background-color: rgba($black, 0.05);
+  font-family: $Helvetica;
+  font-weight: 400;
+}
+
+@import 'header';

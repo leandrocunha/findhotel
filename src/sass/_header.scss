@@ -1,0 +1,15 @@
+.Header {
+  background-color: $primary;
+  padding: 15px;
+
+  &__Brand {
+    background-image: url('images/logo-findhotel.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $white;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    text-indent: -5000px;
+  }
+}
