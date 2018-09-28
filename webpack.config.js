@@ -15,17 +15,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          { loader: 'file-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
+        use: [{ loader: 'file-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Publicis.Salient',
+      title: 'FindHotel - Best Price Guarantee',
       template: 'src/templates/index.html',
     }),
     new ImageMinPlugin({
