@@ -58,6 +58,10 @@
         font-weight: 700;
         padding: 10px 35px;
         text-transform: uppercase;
+
+        &--buy {
+          background-color: $orange;
+        }
       }
     }
   }

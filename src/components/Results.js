@@ -23,7 +23,7 @@ const Results = ({ results }) => (
           <p className="Results__Result__Prices__Price">
             <Numeral value={hotel.price} />
           </p>
-          <button className="Results__Result__Prices__Button" type="button">
+          <button className="Results__Result__Prices__Button Results__Result__Prices__Button--buy" type="button">
             Booking now
           </button>
         </div>
