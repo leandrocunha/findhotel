@@ -6,10 +6,16 @@
   margin: 0 0 15px 0;
 
   &__Wrapper {
+    align-items: center;
     background-color: $white;
     display: flex;
     padding: 15px;
     width: 960px;
+
+    &__Form {
+      align-items: center;
+      display: flex;
+    }
 
     &__Overview {
       line-height: 20px;
