@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import results from '../mock';
 import Results from './Results';
+import Sort from './Sort';
 
 const App = () => (
   <Fragment>
@@ -8,7 +9,7 @@ const App = () => (
       <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
     </header>
     <div>Filters</div>
-    <div>Sort</div>
+    <Sort />
     <Results results={results} />
   </Fragment>
 );
