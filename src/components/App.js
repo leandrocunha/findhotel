@@ -1,17 +1,31 @@
-import React, { Fragment } from 'react';
-import results from '../mock';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import Loading from './Loading';
 import Results from './Results';
 import Sort from './Sort';
+import { results as actionResults } from '../actions/search';
 
-const App = () => (
-  <Fragment>
-    <header className="Header">
-      <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
-    </header>
-    <div>Filters</div>
-    <Sort />
-    <Results results={results} />
-  </Fragment>
-);
+class App extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    setTimeout(() => dispatch(actionResults()), 1000);
+  }
 
-export default App;
+  render() {
+    const { loading, results } = this.props;
+    return (
+      <Fragment>
+        <header className="Header">
+          <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
+        </header>
+        <div>Filters</div>
+        <Sort />
+        {loading ? <Loading /> : <Results results={results} />}
+      </Fragment>
+    );
+  }
+}
+
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(App);
