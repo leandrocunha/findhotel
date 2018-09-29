@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Numeral from './Numeral';
 import Rating from './Rating';
 import Tags from './Tags';
 
@@ -18,7 +19,14 @@ const Results = ({ results }) => (
           <Rating rate={hotel.rating} />
           <Tags tags={hotel.compliments} />
         </div>
-        <div className="Results__Result__Prices">{hotel.price}</div>
+        <div className="Results__Result__Prices">
+          <p className="Results__Result__Prices__Price">
+            <Numeral value={hotel.price} />
+          </p>
+          <button className="Results__Result__Prices__Button" type="button">
+            Booking now
+          </button>
+        </div>
       </div>
     ))}
   </div>

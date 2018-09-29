@@ -7,7 +7,9 @@ const createRating = (rate) => {
 
   for (let index = 0; index < 5; index++) {
     stars.push(
-      <li className={classnames('Rating__Star', index < rate && 'Rating__Star--fill')}>{index}</li>,
+      <li key={index} className={classnames('Rating__Star', index < rate && 'Rating__Star--fill')}>
+        {index}
+      </li>,
     );
   }
 
