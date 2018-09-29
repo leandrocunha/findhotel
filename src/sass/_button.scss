@@ -1,0 +1,30 @@
+.Button {
+  background-color: $primary;
+  border: none;
+  border-radius: 50px;
+  color: $white;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px 35px;
+  text-transform: uppercase;
+
+  &--buy {
+    background-color: $orange;
+  }
+
+  &--link {
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: underline;
+    text-transform: initial;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

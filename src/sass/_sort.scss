@@ -3,8 +3,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 0 15px 0;
 
   &__Wrapper {
+    background-color: $white;
+    display: flex;
+    padding: 15px;
     width: 960px;
+
+    &__Overview {
+      line-height: 20px;
+      margin: 0 0 0 15px;
+    }
   }
 }

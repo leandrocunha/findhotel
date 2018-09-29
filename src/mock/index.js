@@ -7,6 +7,7 @@ const results = [
     grade: 7.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 105,
+    greatDeal: true,
   },
   {
     id: 1,
@@ -22,6 +23,7 @@ const results = [
       'Very clean',
     ],
     price: 236,
+    greatDeal: true,
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ const results = [
     grade: 8.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 248,
+    greatDeal: true,
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const results = [
       'Very clean',
     ],
     price: 239,
+    greatDeal: true,
   },
   {
     id: 4,
@@ -55,6 +59,7 @@ const results = [
     grade: 8.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 328,
+    greatDeal: true,
   },
   {
     id: 5,
@@ -70,6 +75,7 @@ const results = [
       'Very clean',
     ],
     price: 142,
+    greatDeal: false,
   },
   {
     id: 6,
@@ -79,6 +85,7 @@ const results = [
     grade: 8.2,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 96,
+    greatDeal: false,
   },
   {
     id: 7,
@@ -94,6 +101,7 @@ const results = [
       'Very clean',
     ],
     price: 174,
+    greatDeal: false,
   },
   {
     id: 8,
@@ -103,6 +111,7 @@ const results = [
     grade: 7.9,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 274,
+    greatDeal: false,
   },
   {
     id: 9,
@@ -118,6 +127,7 @@ const results = [
       'Very clean',
     ],
     price: 139,
+    greatDeal: false,
   },
   {
     id: 10,
@@ -127,6 +137,7 @@ const results = [
     grade: 9.3,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 422,
+    greatDeal: false,
   },
   {
     id: 11,
@@ -142,6 +153,7 @@ const results = [
       'Very clean',
     ],
     price: 139,
+    greatDeal: false,
   },
   {
     id: 12,
@@ -151,6 +163,7 @@ const results = [
     grade: 7.1,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 290,
+    greatDeal: false,
   },
   {
     id: 13,
@@ -166,6 +179,7 @@ const results = [
       'Very clean',
     ],
     price: 79,
+    greatDeal: false,
   },
   {
     id: 14,
@@ -175,6 +189,7 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 254,
+    greatDeal: false,
   },
   {
     id: 15,
@@ -190,6 +205,7 @@ const results = [
       'Very clean',
     ],
     price: 138,
+    greatDeal: false,
   },
   {
     id: 16,
@@ -199,6 +215,7 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 292,
+    greatDeal: false,
   },
   {
     id: 17,
@@ -214,6 +231,7 @@ const results = [
       'Very clean',
     ],
     price: 165,
+    greatDeal: false,
   },
   {
     id: 18,
@@ -223,6 +241,7 @@ const results = [
     grade: 7.9,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 156,
+    greatDeal: false,
   },
   {
     id: 19,
@@ -238,6 +257,7 @@ const results = [
       'Very clean',
     ],
     price: 118,
+    greatDeal: false,
   },
   {
     id: 20,
@@ -247,6 +267,7 @@ const results = [
     grade: 7.3,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 282,
+    greatDeal: false,
   },
   {
     id: 21,
@@ -262,6 +283,7 @@ const results = [
       'Very clean',
     ],
     price: 148,
+    greatDeal: false,
   },
   {
     id: 22,
@@ -271,6 +293,7 @@ const results = [
     grade: 8.1,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 163,
+    greatDeal: false,
   },
   {
     id: 23,
@@ -286,6 +309,7 @@ const results = [
       'Very clean',
     ],
     price: 343,
+    greatDeal: false,
   },
   {
     id: 24,
@@ -295,6 +319,7 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 176,
+    greatDeal: false,
   },
 ];
 

@@ -19,7 +19,10 @@ class App extends Component {
           <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
         </header>
         <div>Filters</div>
-        <Sort />
+        <Sort
+          greatDeal={results.length ? results.filter(r => r.greatDeal).length : 0}
+          total={results.length}
+        />
         {loading ? <Loading /> : <Results results={results} />}
       </Fragment>
     );

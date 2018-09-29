@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Numeral from './Numeral';
 import Rating from './Rating';
+import Ribbon from './Ribbon';
 import Tags from './Tags';
 
 const Results = ({ results }) => (
@@ -13,6 +14,7 @@ const Results = ({ results }) => (
           style={{ backgroundImage: `url('${hotel.image}')` }}
         >
           <img alt={hotel.name} src={hotel.image} />
+          {hotel.greatDeal && <Ribbon />}
         </div>
         <div className="Results__Result__Data">
           <h2 className="Results__Result__Data__Name">{hotel.name}</h2>
@@ -23,7 +25,7 @@ const Results = ({ results }) => (
           <p className="Results__Result__Prices__Price">
             <Numeral value={hotel.price} />
           </p>
-          <button className="Results__Result__Prices__Button Results__Result__Prices__Button--buy" type="button">
+          <button className="Button Button--buy" type="button">
             Booking now
           </button>
         </div>

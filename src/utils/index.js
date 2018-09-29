@@ -2,21 +2,22 @@ const sort = (direction, arr) => {
   switch (direction) {
     case 'best_rating':
       arr.sort((a, b) => b.rating - a.rating);
-      break;
+      return arr;
 
     case 'lowest_prices':
       arr.sort((a, b) => a.price - b.price);
-      break;
+      return arr;
 
     case 'highest_prices':
       arr.sort((a, b) => b.price - a.price);
-      break;
+      return arr;
+
+    case 'great_deal':
+      return arr.filter(r => r.greatDeal);
 
     default:
-      break;
+      return arr;
   }
-
-  return arr;
 };
 
 export { sort };

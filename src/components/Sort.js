@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { search, sort } from '../actions/search';
 
@@ -16,10 +17,12 @@ class Sort extends Component {
   }
 
   render() {
+    const { greatDeal, total } = this.props;
+
     return (
       <div className="Sort">
         <div className="Sort__Wrapper">
-          <form>
+          <form className="Sort__Wrapper__Form">
             <label htmlFor="sortOpts">Sort by:</label>
             <select id="sortOpts" onChange={e => this.sort(e.target.value)}>
               <option>Select a option</option>
@@ -28,10 +31,26 @@ class Sort extends Component {
               <option value="highest_prices">Highest prices</option>
             </select>
           </form>
+          <p className="Sort__Wrapper__Overview">
+            {`${total} hotels,`}
+            {' '}
+            <button
+              className="Button Button--link"
+              onClick={() => this.sort('great_deal')}
+              type="button"
+            >
+              {`${greatDeal} with great deals`}
+            </button>
+          </p>
         </div>
       </div>
     );
   }
 }
+
+Sort.defaultProps = {
+  greatDeal: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+};
 
 export default connect()(Sort);
