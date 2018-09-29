@@ -1,4 +1,5 @@
 import results from '../mock';
+import { sort } from '../utils';
 
 const initialState = { loading: true, results: [] };
 
@@ -9,6 +10,9 @@ const search = (state = initialState, { type, data }) => {
 
     case 'SEARCH/RESULTS':
       return { loading: false, results };
+
+    case 'SEARCH/SORT':
+      return { loading: false, results: sort(data, results) };
 
     default:
       return state;

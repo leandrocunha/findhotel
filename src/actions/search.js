@@ -2,4 +2,6 @@ const search = () => ({ type: 'SEARCH' });
 
 const results = () => ({ type: 'SEARCH/RESULTS' });
 
-export { search, results };
+const sort = direction => ({ type: 'SEARCH/SORT', data: direction });
+
+export { results, search, sort };
