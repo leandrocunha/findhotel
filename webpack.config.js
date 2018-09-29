@@ -1,6 +1,7 @@
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinPlugin = require('imagemin-webpack-plugin').default;
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,6 +21,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.SourceMapDevToolPlugin({ filename: '[name].js.map' }),
     new HtmlWebpackPlugin({
       title: 'FindHotel - Best Price Guarantee',
       template: 'src/templates/index.html',

@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import results from '../mock';
+import Results from './Results';
 
 const App = () => (
   <Fragment>
@@ -7,7 +9,7 @@ const App = () => (
     </header>
     <div>Filters</div>
     <div>Sort</div>
-    <div>Results</div>
+    <Results results={results} />
   </Fragment>
 );
 
