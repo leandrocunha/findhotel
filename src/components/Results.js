@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Rating from './Rating';
+import Tags from './Tags';
 
 const Results = ({ results }) => (
   <div className="Results">
@@ -13,7 +15,10 @@ const Results = ({ results }) => (
         </div>
         <div className="Results__Result__Data">
           <h2 className="Results__Result__Data__Name">{hotel.name}</h2>
+          <Rating rate={hotel.rating} />
+          <Tags tags={hotel.compliments} />
         </div>
+        <div className="Results__Result__Prices">{hotel.price}</div>
       </div>
     ))}
   </div>

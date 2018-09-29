@@ -1,0 +1,13 @@
+.Rating {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  &__Star {
+    display: inline-block;
+
+    &--fill {
+      font-weight: 700;
+    }
+  }
+}

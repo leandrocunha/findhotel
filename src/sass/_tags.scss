@@ -1,0 +1,17 @@
+.Tags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__Tag {
+    background-color: rgba($black, 0.1);
+    border-radius: 10px;
+    color: rgba($black, 0.6);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+}
