@@ -5,7 +5,7 @@ import Numeral from './Numeral';
 const Comparison = ({ results }) => (
   <ul className="Comparison">
     {results.map(result => (
-      <li className="Comparison__Result">
+      <li className="Comparison__Result" key={result.channel}>
         <span className="Comparison__Result__Item">{result.channel}</span>
         <span className="Comparison__Result__Item">
           <Numeral value={result.value} />

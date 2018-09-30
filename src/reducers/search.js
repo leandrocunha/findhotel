@@ -14,6 +14,9 @@ const search = (state = initialState, { type, data }) => {
     case 'SEARCH/SORT':
       return { loading: false, results: sort(data, results) };
 
+    case 'SEARCH/DISTANCE':
+      return { ...state, results: results.filter(r => r.distance <= data) };
+
     case 'SEARCH/PRICE':
       return { ...state, results: results.filter(r => r.price <= data) };
 

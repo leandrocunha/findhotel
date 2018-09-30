@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
 import { connect } from 'react-redux';
-import { sortPrice, sortRate as actionSortRate } from '../actions/search';
+import {
+  sortDistance as actionSortDistance,
+  sortPrice as actionSortPrice,
+  sortRate as actionSortRate,
+} from '../actions/search';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const SliderTooltip = createSliderWithTooltip(Slider);
@@ -9,13 +13,19 @@ const SliderTooltip = createSliderWithTooltip(Slider);
 class Filters extends Component {
   constructor(props) {
     super(props);
+    this.sortDistance = this.sortDistance.bind(this);
     this.sortPrice = this.sortPrice.bind(this);
     this.sortRate = this.sortRate.bind(this);
   }
 
+  sortDistance(value) {
+    const { dispatch } = this.props;
+    dispatch(actionSortDistance(value));
+  }
+
   sortPrice(value) {
     const { dispatch } = this.props;
-    dispatch(sortPrice(value));
+    dispatch(actionSortPrice(value));
   }
 
   sortRate(value) {
@@ -37,7 +47,7 @@ class Filters extends Component {
           </div>
           <div className="Filters__Wrapper__Filter">
             <p>Distance from city center</p>
-            <SliderTooltip />
+            <SliderTooltip min={0} max={1000} onAfterChange={value => this.sortDistance(value)} />
           </div>
         </div>
       </div>
