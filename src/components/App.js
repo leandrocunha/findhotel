@@ -5,6 +5,7 @@ import Filters from './Filters';
 import Loading from './Loading';
 import Results from './Results';
 import Sort from './Sort';
+import GMaps from './GMaps';
 
 class App extends Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class App extends Component {
           total={results.length}
         />
         {loading ? <Loading /> : <Results results={results} />}
+        <GMaps isMarkerShown />
       </Fragment>
     );
   }
