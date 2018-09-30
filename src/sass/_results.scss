@@ -4,6 +4,10 @@
   flex-direction: column;
   justify-content: center;
 
+  button {
+    margin: 15px 0;
+  }
+
   &__Result {
     background-color: $white;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
@@ -40,12 +44,27 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 15px 0 5px 0;
       width: 200px;
+
+      &__FreeCancelation {
+        color: $green;
+        font-size: 12px;
+        margin: 3px 0;
+      }
+
+      &__OriginalPrice {
+        color: $red;
+        font-size: 14px;
+        margin: 0;
+        text-decoration: line-through;
+      }
 
       &__Price {
         color: rgba($black, 0.8);
         font-size: 25px;
         font-weight: 700;
+        margin: 0 0 10px 0;
       }
     }
   }

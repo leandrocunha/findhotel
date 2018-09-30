@@ -6,8 +6,10 @@ $Helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //colors
 $black: #000;
 $blue: #4f94dc;
+$green: #0c9e1e;
 $orange: #ff5200;
 $orangeDark: #b13d1e;
+$red: #e00000;
 $white: #fff;
 
 $primary: $blue;
@@ -28,6 +30,7 @@ body {
 @import 'results';
 @import 'rating';
 @import 'tags';
+@import 'comparison';
 @import 'button';
 @import 'ribbon';
 @import 'slider';

@@ -7,7 +7,13 @@ const results = [
     grade: 7.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 105,
+    originalPrice: 125,
     greatDeal: true,
+    comparison: [
+      { channel: 'Booking.com', value: 114 },
+      { channel: 'Expedia', value: 119 },
+      { channel: 'Priceline', value: 122 },
+    ],
   },
   {
     id: 1,
@@ -23,7 +29,13 @@ const results = [
       'Very clean',
     ],
     price: 236,
+    originalPrice: 256,
     greatDeal: true,
+    comparison: [
+      { channel: 'Booking.com', value: 239 },
+      { channel: 'Expedia', value: 242 },
+      { channel: 'Priceline', value: 244 },
+    ],
   },
   {
     id: 2,
@@ -33,7 +45,13 @@ const results = [
     grade: 8.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 248,
+    originalPrice: 268,
     greatDeal: true,
+    comparison: [
+      { channel: 'Booking.com', value: 250 },
+      { channel: 'Expedia', value: 252 },
+      { channel: 'Priceline', value: 254 },
+    ],
   },
   {
     id: 3,
@@ -49,7 +67,13 @@ const results = [
       'Very clean',
     ],
     price: 239,
+    originalPrice: 259,
     greatDeal: true,
+    comparison: [
+      { channel: 'Booking.com', value: 241 },
+      { channel: 'Expedia', value: 243 },
+      { channel: 'Priceline', value: 245 },
+    ],
   },
   {
     id: 4,
@@ -59,7 +83,13 @@ const results = [
     grade: 8.8,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 328,
+    originalPrice: 348,
     greatDeal: true,
+    comparison: [
+      { channel: 'Booking.com', value: 330 },
+      { channel: 'Expedia', value: 332 },
+      { channel: 'Priceline', value: 334 },
+    ],
   },
   {
     id: 5,
@@ -75,7 +105,13 @@ const results = [
       'Very clean',
     ],
     price: 142,
+    originalPrice: 162,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 144 },
+      { channel: 'Expedia', value: 146 },
+      { channel: 'Priceline', value: 148 },
+    ],
   },
   {
     id: 6,
@@ -85,7 +121,13 @@ const results = [
     grade: 8.2,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 96,
+    originalPrice: 116,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 98 },
+      { channel: 'Expedia', value: 100 },
+      { channel: 'Priceline', value: 102 },
+    ],
   },
   {
     id: 7,
@@ -101,7 +143,13 @@ const results = [
       'Very clean',
     ],
     price: 174,
+    originalPrice: 194,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 176 },
+      { channel: 'Expedia', value: 178 },
+      { channel: 'Priceline', value: 180 },
+    ],
   },
   {
     id: 8,
@@ -111,7 +159,13 @@ const results = [
     grade: 7.9,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 274,
+    originalPrice: 294,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 276 },
+      { channel: 'Expedia', value: 278 },
+      { channel: 'Priceline', value: 280 },
+    ],
   },
   {
     id: 9,
@@ -127,7 +181,13 @@ const results = [
       'Very clean',
     ],
     price: 139,
+    originalPrice: 159,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 141 },
+      { channel: 'Expedia', value: 143 },
+      { channel: 'Priceline', value: 145 },
+    ],
   },
   {
     id: 10,
@@ -137,7 +197,13 @@ const results = [
     grade: 9.3,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 422,
+    originalPrice: 442,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 424 },
+      { channel: 'Expedia', value: 426 },
+      { channel: 'Priceline', value: 428 },
+    ],
   },
   {
     id: 11,
@@ -153,7 +219,13 @@ const results = [
       'Very clean',
     ],
     price: 139,
+    originalPrice: 159,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 141 },
+      { channel: 'Expedia', value: 143 },
+      { channel: 'Priceline', value: 145 },
+    ],
   },
   {
     id: 12,
@@ -163,7 +235,13 @@ const results = [
     grade: 7.1,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 290,
+    originalPrice: 310,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 292 },
+      { channel: 'Expedia', value: 294 },
+      { channel: 'Priceline', value: 296 },
+    ],
   },
   {
     id: 13,
@@ -179,7 +257,13 @@ const results = [
       'Very clean',
     ],
     price: 79,
+    originalPrice: 99,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 81 },
+      { channel: 'Expedia', value: 83 },
+      { channel: 'Priceline', value: 85 },
+    ],
   },
   {
     id: 14,
@@ -189,7 +273,13 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 254,
+    originalPrice: 274,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 276 },
+      { channel: 'Expedia', value: 278 },
+      { channel: 'Priceline', value: 280 },
+    ],
   },
   {
     id: 15,
@@ -205,7 +295,13 @@ const results = [
       'Very clean',
     ],
     price: 138,
+    originalPrice: 158,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 140 },
+      { channel: 'Expedia', value: 142 },
+      { channel: 'Priceline', value: 144 },
+    ],
   },
   {
     id: 16,
@@ -215,7 +311,13 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 292,
+    originalPrice: 312,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 294 },
+      { channel: 'Expedia', value: 296 },
+      { channel: 'Priceline', value: 298 },
+    ],
   },
   {
     id: 17,
@@ -231,7 +333,13 @@ const results = [
       'Very clean',
     ],
     price: 165,
+    originalPrice: 185,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 167 },
+      { channel: 'Expedia', value: 169 },
+      { channel: 'Priceline', value: 171 },
+    ],
   },
   {
     id: 18,
@@ -241,7 +349,13 @@ const results = [
     grade: 7.9,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 156,
+    originalPrice: 176,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 158 },
+      { channel: 'Expedia', value: 160 },
+      { channel: 'Priceline', value: 162 },
+    ],
   },
   {
     id: 19,
@@ -257,7 +371,13 @@ const results = [
       'Very clean',
     ],
     price: 118,
+    originalPrice: 138,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 120 },
+      { channel: 'Expedia', value: 122 },
+      { channel: 'Priceline', value: 124 },
+    ],
   },
   {
     id: 20,
@@ -267,7 +387,13 @@ const results = [
     grade: 7.3,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 282,
+    originalPrice: 302,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 284 },
+      { channel: 'Expedia', value: 286 },
+      { channel: 'Priceline', value: 288 },
+    ],
   },
   {
     id: 21,
@@ -283,7 +409,13 @@ const results = [
       'Very clean',
     ],
     price: 148,
+    originalPrice: 168,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 150 },
+      { channel: 'Expedia', value: 152 },
+      { channel: 'Priceline', value: 154 },
+    ],
   },
   {
     id: 22,
@@ -293,7 +425,13 @@ const results = [
     grade: 8.1,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 163,
+    originalPrice: 183,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 165 },
+      { channel: 'Expedia', value: 167 },
+      { channel: 'Priceline', value: 169 },
+    ],
   },
   {
     id: 23,
@@ -309,7 +447,13 @@ const results = [
       'Very clean',
     ],
     price: 343,
+    originalPrice: 363,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 345 },
+      { channel: 'Expedia', value: 347 },
+      { channel: 'Priceline', value: 349 },
+    ],
   },
   {
     id: 24,
@@ -319,7 +463,13 @@ const results = [
     grade: 8.4,
     compliments: ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi'],
     price: 176,
+    originalPrice: 196,
     greatDeal: false,
+    comparison: [
+      { channel: 'Booking.com', value: 178 },
+      { channel: 'Expedia', value: 180 },
+      { channel: 'Priceline', value: 182 },
+    ],
   },
 ];
 

@@ -29,11 +29,11 @@ class Filters extends Component {
         <div className="Filters__Wrapper">
           <div className="Filters__Wrapper__Filter">
             <p>Max Price</p>
-            <SliderTooltip min={0} max={500} onChange={value => this.sortPrice(value)} step={50} />
+            <SliderTooltip min={0} max={500} onAfterChange={value => this.sortPrice(value)} />
           </div>
           <div className="Filters__Wrapper__Filter">
             <p>Min Rating</p>
-            <SliderTooltip min={1} max={5} onChange={value => this.sortRate(value)} step={1} />
+            <SliderTooltip min={1} max={5} onAfterChange={value => this.sortRate(value)} />
           </div>
           <div className="Filters__Wrapper__Filter">
             <p>Distance from city center</p>

@@ -4,6 +4,7 @@ import Numeral from './Numeral';
 import Rating from './Rating';
 import Ribbon from './Ribbon';
 import Tags from './Tags';
+import Comparison from './Comparison';
 
 const Results = ({ results }) => (
   <div className="Results">
@@ -22,12 +23,19 @@ const Results = ({ results }) => (
           <Tags tags={hotel.compliments} />
         </div>
         <div className="Results__Result__Prices">
+          <p className="Results__Result__Prices__OriginalPrice">
+            <Numeral value={hotel.originalPrice} />
+          </p>
           <p className="Results__Result__Prices__Price">
             <Numeral value={hotel.price} />
           </p>
+          {hotel.greatDeal && (
+            <p className="Results__Result__Prices__FreeCancelation">Free cancelation</p>
+          )}
           <button className="Button Button--buy" type="button">
             Booking now
           </button>
+          <Comparison results={hotel.comparison} />
         </div>
       </div>
     ))}
