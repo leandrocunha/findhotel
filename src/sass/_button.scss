@@ -22,9 +22,19 @@
     padding: 0;
     text-decoration: underline;
     text-transform: initial;
+  }
 
-    &:hover {
-      text-decoration: none;
+  &--icon {
+    align-items: center;
+    display: flex;
+
+    img {
+      height: 16px;
+      margin: 0 8px 0 0;
     }
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }

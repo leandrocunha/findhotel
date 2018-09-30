@@ -23,6 +23,12 @@ const search = (state = initialState, { type, data }) => {
     case 'SEARCH/RATE':
       return { ...state, results: results.filter(r => r.rating <= data) };
 
+    case 'SEARCH/MAP/OPEN':
+      return { ...state, map: { show: true, coordinates: data } };
+
+    case 'SEARCH/MAP/CLOSE':
+      return { ...state, map: undefined };
+
     default:
       return state;
   }

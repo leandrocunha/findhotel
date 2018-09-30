@@ -1,6 +1,10 @@
-const search = () => ({ type: 'SEARCH' });
+const mapClose = () => ({ type: 'SEARCH/MAP/CLOSE' });
+
+const mapOpen = coordinates => ({ type: 'SEARCH/MAP/OPEN', data: coordinates });
 
 const results = () => ({ type: 'SEARCH/RESULTS' });
+
+const search = () => ({ type: 'SEARCH' });
 
 const sort = direction => ({ type: 'SEARCH/SORT', data: direction });
 
@@ -11,5 +15,5 @@ const sortPrice = value => ({ type: 'SEARCH/PRICE', data: value });
 const sortRate = value => ({ type: 'SEARCH/RATE', data: value });
 
 export {
-  results, search, sort, sortDistance, sortPrice, sortRate,
+  mapClose, mapOpen, results, search, sort, sortDistance, sortPrice, sortRate,
 };

@@ -2,10 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { results as actionResults } from '../actions/search';
 import Filters from './Filters';
+import GMaps from './GMaps';
 import Loading from './Loading';
+import Modal from './Modal';
 import Results from './Results';
 import Sort from './Sort';
-import GMaps from './GMaps';
 
 class App extends Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class App extends Component {
   }
 
   render() {
-    const { loading, results } = this.props;
+    const { loading, results, map } = this.props;
     return (
       <Fragment>
         <header className="Header">
@@ -26,7 +27,11 @@ class App extends Component {
           total={results.length}
         />
         {loading ? <Loading /> : <Results results={results} />}
-        <GMaps isMarkerShown />
+        {map && (
+          <Modal>
+            <GMaps isMarkerShown />
+          </Modal>
+        )}
       </Fragment>
     );
   }
