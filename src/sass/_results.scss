@@ -31,6 +31,14 @@
       flex: 1;
       padding: 15px;
 
+      &__Distance {
+        background-image: url('../images/pin.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $primary;
+        padding: 0 0 0 20px;
+      }
+
       &__Name {
         color: rgba($black, 0.8);
         margin: 0 0 5px 0;

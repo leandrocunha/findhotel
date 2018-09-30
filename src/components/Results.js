@@ -20,6 +20,7 @@ const Results = ({ results }) => (
         <div className="Results__Result__Data">
           <h2 className="Results__Result__Data__Name">{hotel.name}</h2>
           <Rating rate={hotel.rating} />
+          <p className="Results__Result__Data__Distance">{`${hotel.distance}m to city centre`}</p>
           <Tags tags={hotel.compliments} />
         </div>
         <div className="Results__Result__Prices">
