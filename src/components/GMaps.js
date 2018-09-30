@@ -1,31 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
+import PropTypes from 'prop-types';
+import Marker from './Marker';
 
-const AnyReactComponent = ({ text }) => (
-  <div>
-    <img src="images/pin.svg" />
+const GMaps = ({
+  center, lat, lng, zoom,
+}) => (
+  <div className="GMaps">
+    <GoogleMapReact
+      bootstrapURLKeys={{ key: 'AIzaSyAuAYdtDWwrfUVtYBIRkeBylF23qebA6rQ' }}
+      defaultCenter={center}
+      defaultZoom={zoom}
+      center={{ lat, lng }}
+    >
+      <Marker lat={lat} lng={lng} />
+    </GoogleMapReact>
   </div>
 );
-
-class GMaps extends Component {
-  render() {
-    const { lat, lng } = this.props;
-
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyAuAYdtDWwrfUVtYBIRkeBylF23qebA6rQ' }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          center={{ lat, lng }}
-        >
-          <AnyReactComponent lat={lat} lng={lng} />
-        </GoogleMapReact>
-      </div>
-    );
-  }
-}
 
 GMaps.defaultProps = {
   center: {
@@ -35,4 +26,10 @@ GMaps.defaultProps = {
   zoom: 15,
 };
 
+GMaps.propTypes = {
+  center: PropTypes.instanceOf(Object),
+  lat: PropTypes.number.isRequired,
+  lng: PropTypes.number.isRequired,
+  zoom: PropTypes.number,
+};
 export default GMaps;
