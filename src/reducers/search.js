@@ -14,6 +14,12 @@ const search = (state = initialState, { type, data }) => {
     case 'SEARCH/SORT':
       return { loading: false, results: sort(data, results) };
 
+    case 'SEARCH/PRICE':
+      return { ...state, results: results.filter(r => r.price <= data) };
+
+    case 'SEARCH/RATE':
+      return { ...state, results: results.filter(r => r.rating <= data) };
+
     default:
       return state;
   }

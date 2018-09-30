@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import { results as actionResults } from '../actions/search';
+import Filters from './Filters';
 import Loading from './Loading';
 import Results from './Results';
 import Sort from './Sort';
-import { results as actionResults } from '../actions/search';
 
 class App extends Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ class App extends Component {
         <header className="Header">
           <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
         </header>
-        <div>Filters</div>
+        <Filters />
         <Sort
           greatDeal={results.length ? results.filter(r => r.greatDeal).length : 0}
           total={results.length}
