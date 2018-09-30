@@ -29,7 +29,7 @@ class App extends Component {
         {loading ? <Loading /> : <Results results={results} />}
         {map && (
           <Modal>
-            <GMaps isMarkerShown />
+            <GMaps isMarkerShown {...map.coordinates} />
           </Modal>
         )}
       </Fragment>

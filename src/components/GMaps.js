@@ -9,6 +9,8 @@ const AnyReactComponent = ({ text }) => (
 
 class GMaps extends Component {
   render() {
+    const { lat, lng } = this.props;
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100%', width: '100%' }}>
@@ -16,9 +18,9 @@ class GMaps extends Component {
           bootstrapURLKeys={{ key: 'AIzaSyAuAYdtDWwrfUVtYBIRkeBylF23qebA6rQ' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          center={{ lat: 52.3253596, lng: 4.7939909 }}
+          center={{ lat, lng }}
         >
-          <AnyReactComponent lat={52.3253596} lng={4.7939909} />
+          <AnyReactComponent lat={lat} lng={lng} />
         </GoogleMapReact>
       </div>
     );

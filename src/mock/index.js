@@ -39,7 +39,7 @@ const results = [
       { channel: 'Priceline', value: 244 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3760456, lng: 4.8943917 },
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const results = [
       { channel: 'Priceline', value: 254 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3780943, lng: 4.9142688 },
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ const results = [
       { channel: 'Priceline', value: 245 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.357655, lng: 4.844576 },
   },
   {
     id: 4,
@@ -99,7 +99,7 @@ const results = [
       { channel: 'Priceline', value: 334 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.376752, lng: 4.904618 },
   },
   {
     id: 5,
@@ -123,7 +123,7 @@ const results = [
       { channel: 'Priceline', value: 148 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.385601, lng: 4.8470598 },
   },
   {
     id: 6,
@@ -141,7 +141,7 @@ const results = [
       { channel: 'Priceline', value: 102 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3607579, lng: 4.9188431 },
   },
   {
     id: 7,
@@ -165,7 +165,7 @@ const results = [
       { channel: 'Priceline', value: 180 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3795258, lng: 4.8970974 },
   },
   {
     id: 8,
@@ -183,7 +183,7 @@ const results = [
       { channel: 'Priceline', value: 280 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3770969, lng: 4.8977789 },
   },
   {
     id: 9,
@@ -207,7 +207,7 @@ const results = [
       { channel: 'Priceline', value: 145 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3905887, lng: 4.8376019 },
   },
   {
     id: 10,
@@ -225,7 +225,7 @@ const results = [
       { channel: 'Priceline', value: 428 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3617751, lng: 4.9118187 },
   },
   {
     id: 11,
@@ -249,7 +249,7 @@ const results = [
       { channel: 'Priceline', value: 145 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3702469, lng: 4.8966743 },
   },
   {
     id: 12,
@@ -267,7 +267,7 @@ const results = [
       { channel: 'Priceline', value: 296 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3257759, lng: 4.7918976 },
   },
   {
     id: 13,
@@ -291,7 +291,7 @@ const results = [
       { channel: 'Priceline', value: 85 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3744149, lng: 4.9041443 },
   },
   {
     id: 14,
@@ -309,7 +309,7 @@ const results = [
       { channel: 'Priceline', value: 280 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.309592, lng: 4.941963 },
   },
   {
     id: 15,
@@ -333,7 +333,7 @@ const results = [
       { channel: 'Priceline', value: 144 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3727067, lng: 4.8943658 },
   },
   {
     id: 16,
@@ -351,7 +351,7 @@ const results = [
       { channel: 'Priceline', value: 298 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.313053, lng: 4.947814 },
   },
   {
     id: 17,
@@ -375,7 +375,7 @@ const results = [
       { channel: 'Priceline', value: 171 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.354685, lng: 4.913317 },
   },
   {
     id: 18,
@@ -393,7 +393,7 @@ const results = [
       { channel: 'Priceline', value: 162 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3723264, lng: 4.8362396 },
   },
   {
     id: 19,
@@ -417,7 +417,7 @@ const results = [
       { channel: 'Priceline', value: 124 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3697554, lng: 4.8887815 },
   },
   {
     id: 20,
@@ -435,7 +435,7 @@ const results = [
       { channel: 'Priceline', value: 288 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3625174, lng: 4.7949958 },
   },
   {
     id: 21,
@@ -459,7 +459,7 @@ const results = [
       { channel: 'Priceline', value: 154 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3882205, lng: 4.8376269 },
   },
   {
     id: 22,
@@ -477,7 +477,7 @@ const results = [
       { channel: 'Priceline', value: 169 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3795258, lng: 4.8970974 },
   },
   {
     id: 23,
@@ -501,7 +501,7 @@ const results = [
       { channel: 'Priceline', value: 349 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.3615846, lng: 4.8830309 },
   },
   {
     id: 24,
@@ -519,7 +519,7 @@ const results = [
       { channel: 'Priceline', value: 182 },
     ],
     distance: Math.floor(Math.random() * 1000),
-    coordinates: { lat: 52.3253596, lng: 4.7939909 },
+    coordinates: { lat: 52.346559, lng: 4.831026 },
   },
 ];
 
