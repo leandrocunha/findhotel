@@ -73,6 +73,7 @@ class Sort extends Component {
             {' '}
             <button
               className="Button Button--link"
+              id="btnSortGreatDeal"
               onClick={() => this.sort('great_deal')}
               type="button"
             >

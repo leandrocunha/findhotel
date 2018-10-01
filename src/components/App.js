@@ -9,9 +9,18 @@ import Results from './Results';
 import Sort from './Sort';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.greatDealSize = this.greatDealSize.bind(this);
+  }
+
   componentDidMount() {
     const { dispatch } = this.props;
     setTimeout(() => dispatch(actionResults()), 1000);
+  }
+
+  greatDealSize(results) {
+    return results.length ? results.filter(r => r.greatDeal).length : 0;
   }
 
   render() {
@@ -22,10 +31,7 @@ class App extends Component {
           <h1 className="Header__Brand">FindHotel - Best prices Guarantee</h1>
         </header>
         <Filters />
-        <Sort
-          greatDeal={results.length ? results.filter(r => r.greatDeal).length : 0}
-          total={results.length}
-        />
+        <Sort greatDeal={this.greatDealSize(results)} total={results.length} />
         {loading ? <Loading /> : <Results results={results} />}
         {map && (
           <Modal>

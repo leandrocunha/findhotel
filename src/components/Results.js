@@ -37,6 +37,7 @@ class Results extends Component {
               <Rating rate={hotel.rating} />
               <button
                 className="Button Button--link Button--icon"
+                id="btnShowMap"
                 type="button"
                 onClick={() => this.showMap(hotel.coordinates)}
               >
