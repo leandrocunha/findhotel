@@ -5,6 +5,15 @@
   position: relative;
   width: 280px;
 
+  @media screen and (max-width: $desktop) {
+    width: 25%;
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 240px;
+    width: 100%;
+  }
+
   &:after {
     background: linear-gradient(
       to bottom,

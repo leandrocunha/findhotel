@@ -11,6 +11,11 @@
 
   &--buy {
     background-color: $orange;
+
+    @media screen and (max-width: $tablet) {
+      padding: 15px 35px;
+      width: 90%;
+    }
   }
 
   &--link {
