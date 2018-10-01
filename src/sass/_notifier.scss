@@ -10,6 +10,7 @@
   padding: 15px;
   transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
   width: 350px;
+  z-index: 50;
 
   &--show {
     right: 10px;

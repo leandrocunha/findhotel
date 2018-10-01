@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import Slider from 'rc-slider';
 import { connect } from 'react-redux';
 import {
@@ -34,8 +35,10 @@ class Filters extends Component {
   }
 
   render() {
+    const { filter } = this.props;
+
     return (
-      <div className="Filters">
+      <div className={classnames('Filters', filter && 'Filters--mobile')}>
         <div className="Filters__Wrapper">
           <div className="Filters__Wrapper__Filter">
             <p>Max Price</p>
@@ -55,4 +58,6 @@ class Filters extends Component {
   }
 }
 
-export default connect()(Filters);
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(Filters);

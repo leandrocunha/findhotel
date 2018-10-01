@@ -39,6 +39,20 @@
     }
   }
 
+  &--filter {
+    display: none;
+    padding: 0;
+    width: 20px;
+
+    @media screen and (max-width: $tablet) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
   &:hover {
     text-decoration: none;
   }

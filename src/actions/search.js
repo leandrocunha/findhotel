@@ -14,6 +14,16 @@ const sortPrice = value => ({ type: 'SEARCH/PRICE', data: value });
 
 const sortRate = value => ({ type: 'SEARCH/RATE', data: value });
 
+const toggleFilter = () => ({ type: 'SEARCH/FILTER' });
+
 export {
-  mapClose, mapOpen, results, search, sort, sortDistance, sortPrice, sortRate,
+  mapClose,
+  mapOpen,
+  results,
+  search,
+  sort,
+  sortDistance,
+  sortPrice,
+  sortRate,
+  toggleFilter,
 };

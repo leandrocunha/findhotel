@@ -4,6 +4,21 @@
   flex-direction: column;
   justify-content: center;
 
+  @media screen and (max-width: $tablet) {
+    background-color: rgba($white, 0.95);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &--mobile {
+    display: block !important;
+  }
+
   &__Wrapper {
     align-items: center;
     background-color: $white;
@@ -17,9 +32,22 @@
       width: 100%;
     }
 
+    @media screen and (max-width: $tablet) {
+      background-color: transparent;
+      box-shadow: none;
+      flex-direction: column;
+      padding: 80px 30px 0 30px;
+    }
+
     &__Filter {
       flex: 1;
       padding: 0 15px;
+
+      @media screen and (max-width: $tablet) {
+        margin: 0 0 50px 0;
+        padding: 0;
+        width: 100%;
+      }
     }
   }
 }

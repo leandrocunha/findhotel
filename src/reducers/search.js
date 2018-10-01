@@ -29,6 +29,9 @@ const search = (state = initialState, { type, data }) => {
     case 'SEARCH/MAP/CLOSE':
       return { ...state, map: undefined };
 
+    case 'SEARCH/FILTER':
+      return { ...state, filter: !state.filter };
+
     default:
       return state;
   }

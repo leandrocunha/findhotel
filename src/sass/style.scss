@@ -22,9 +22,11 @@ body {
   background-color: rgba($black, 0.05);
   font-family: $Helvetica;
   font-weight: 400;
+  padding-top: 60px;
 }
 
-button {
+* {
+  box-sizing: border-box;
   outline: none;
 }
 
