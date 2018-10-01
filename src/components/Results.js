@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { mapOpen } from '../actions/search';
+import Comparison from './Comparison';
+import Grade from './Grade';
 import Numeral from './Numeral';
 import Rating from './Rating';
 import Ribbon from './Ribbon';
 import Tags from './Tags';
-import Comparison from './Comparison';
-import { mapOpen } from '../actions/search';
 
 class Results extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class Results extends Component {
                 <img src="images/pin.svg" />
                 {`${hotel.distance}m to city centre`}
               </button>
+              <Grade grade={hotel.grade} />
               <Tags tags={hotel.compliments} />
             </div>
             <div className="Results__Result__Prices">

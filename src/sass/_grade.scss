@@ -1,0 +1,17 @@
+.Grade {
+  color: $primary;
+  padding: 0 0 0 24px;
+
+  &--fabulous {
+    background-image: url('../images/thumbsup-green.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $green;
+  }
+
+  &--very-good {
+    background-image: url('../images/thumbsup-blue.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

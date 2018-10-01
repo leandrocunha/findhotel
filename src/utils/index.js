@@ -20,4 +20,19 @@ const sort = (direction, arr) => {
   }
 };
 
-export { sort };
+const gradeAsText = (grade) => {
+  switch (true) {
+    case grade > 8:
+      return 'Fabulous';
+
+    case grade > 6:
+      return 'Very good';
+
+    default:
+      return 'Good';
+  }
+};
+
+const slug = str => str.replace(' ', '-').toLowerCase();
+
+export { gradeAsText, slug, sort };
