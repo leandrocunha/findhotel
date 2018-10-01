@@ -1,0 +1,52 @@
+.Notifier {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2),
+    0 2px 8px 4px rgba(60, 64, 67, 0.1);
+  position: fixed;
+  top: 10px;
+  right: -400px;
+  min-height: 100px;
+  padding: 15px;
+  transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
+  width: 350px;
+
+  &--show {
+    right: 10px;
+  }
+
+  &__Close {
+    background-color: transparent;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    height: 31px;
+    padding: 3px 0 0 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
+    width: 31px;
+
+    &:hover {
+      background-color: rgba($black, 0.05);
+    }
+  }
+
+  &__Title,
+  &__Message {
+    color: rgba($black, 0.8);
+    margin: 10px;
+    max-width: 80%;
+    text-align: left;
+  }
+
+  &__Title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__Message {
+    font-size: 16px;
+  }
+}

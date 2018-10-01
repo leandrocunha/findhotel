@@ -6,7 +6,7 @@ import Comparison from './Comparison';
 import Grade from './Grade';
 import Numeral from './Numeral';
 import Rating from './Rating';
-import Ribbon from './Ribbon';
+import ResultsImage from './ResultsImage';
 import Tags from './Tags';
 
 class Results extends Component {
@@ -26,13 +26,7 @@ class Results extends Component {
       <div className="Results">
         {results.map(hotel => (
           <div className="Results__Result" key={hotel.id}>
-            <div
-              className="Results__Result__Image"
-              style={{ backgroundImage: `url('${hotel.image}')` }}
-            >
-              <img alt={hotel.name} src={hotel.image} />
-              {hotel.greatDeal && <Ribbon />}
-            </div>
+            <ResultsImage {...hotel} />
             <div className="Results__Result__Data">
               <h2 className="Results__Result__Data__Name">{hotel.name}</h2>
               <Rating rate={hotel.rating} />
