@@ -12,19 +12,39 @@ import Sort from './Sort';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    /** Bind greatDealSize function, return the total of results with great deal. */
     this.greatDealSize = this.greatDealSize.bind(this);
+
+    /** Bind toggleFilter function to open/close mobile filter. */
     this.toggleFilter = this.toggleFilter.bind(this);
   }
 
   componentDidMount() {
     const { dispatch } = this.props;
+
+    /** On componentDidMount wait a second to simulate a API call and dispatch
+     * a action to retrieve results.
+     */
     setTimeout(() => dispatch(actions.results()), 1000);
   }
 
+  /**
+   * @function greatDealSize - Retrieve the total of results with great deal size.
+   * @param {Array} results - A array with results to be count.
+   * @returns {number} The total length of results with great deal, if empty return 0.
+   * @todo Move this function to utils.js.
+   * @example
+   * // 10
+   * greatDealSize([{...}, {...}])
+   */
   greatDealSize(results) {
     return results.length ? results.filter(r => r.greatDeal).length : 0;
   }
 
+  /**
+   * @function toggleFilter - Dispatch action to toggle open/close mobile filter.
+   */
   toggleFilter() {
     const { dispatch } = this.props;
     dispatch(actions.toggleFilter());

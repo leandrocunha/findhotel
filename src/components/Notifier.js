@@ -7,20 +7,36 @@ import * as actions from '../actions/search';
 class Notifier extends Component {
   constructor(props) {
     super(props);
+
+    /** Set state with default values.
+     * @param {bool} isOpen
+     * @example
+     * { isOpen: false }
+     */
     this.state = { isOpen: false };
+
+    /** Bind function to close notifier. */
     this.close = this.close.bind(this);
   }
 
   componentDidMount() {
+    /** Call show() method to open Notifier after this component mount. */
     this.show();
   }
 
+  /**
+   * @function close Close notifier setting handle variable to false on local state
+   * and dispatch action to remove component from the DOM.
+   */
   close() {
     const { dispatch } = this.props;
     this.setState({ isOpen: false });
     setTimeout(() => dispatch(actions.notifier('close')), 1000);
   }
 
+  /**
+   * @function show Show notifier setting handle variable to true on local state.
+   */
   show() {
     setTimeout(() => {
       this.setState({ isOpen: true });

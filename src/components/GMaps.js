@@ -3,6 +3,10 @@ import GoogleMapReact from 'google-map-react';
 import PropTypes from 'prop-types';
 import Marker from './Marker';
 
+/** Dumb component to render GoogleMapReact
+ * an plot map at modal.
+ * @todo For security move API key to env file.
+ */
 const GMaps = ({
   center, lat, lng, zoom,
 }) => (

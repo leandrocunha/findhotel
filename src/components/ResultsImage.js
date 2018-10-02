@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Favorite from './Favorite';
 import Ribbon from './Ribbon';
 
+/** Dumb component to render cover image as a background of parent div. */
 const ResultsImage = ({ greatDeal, image, name }) => (
   <div className="ResultsImage" style={{ backgroundImage: `url('${image}')` }}>
     <img className="ResultsImage__Original" alt={name} src={image} />

@@ -6,10 +6,24 @@ import * as actions from '../actions/search';
 class MobileFilterDistance extends Component {
   constructor(props) {
     super(props);
+
+    /** Set state with default values.
+     * @param {number} active
+     * @example
+     * { active: 1001 }
+     */
     this.state = { active: 1001 };
+
+    /** Bind sortDistance to filter results by distance. */
     this.sortDistance = this.sortDistance.bind(this);
   }
 
+  /**
+   * @function sortDistance Filter results by distance from city center.
+   * @param {number} value Number to represent de value of distance from city center in meters.
+   * @returns Results will be returned with values lower than value passed in the paramenter
+   * and dispatch action to close filter overlay.
+   */
   sortDistance(value) {
     const { dispatch } = this.props;
 

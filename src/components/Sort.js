@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { search, sort } from '../actions/search';
 
+/** Object to customize the Select component */
 const customStyles = {
   option: base => ({
     ...base,
@@ -38,9 +39,20 @@ const customStyles = {
 class Sort extends Component {
   constructor(props) {
     super(props);
+
+    /** Bind function to sort results */
     this.sort = this.sort.bind(this);
   }
 
+  /**
+   * @function sort Sort result passing a direction of sort.
+   * @param {string} opt A string to represent the sort direction.
+   * @returns first dispatch an action to show loader and simulate the fetch to API
+   * and after 1seg dispatch actio to sort.
+   * @example
+   * const opt = 'best_rating';
+   * sort(opt)
+   */
   sort(opt) {
     const { dispatch } = this.props;
 

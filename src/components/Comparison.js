@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Numeral from './Numeral';
 
+/** Dumb component to render a list of other price comparators. */
 const Comparison = ({ results }) => (
   <ul className="Comparison">
     {results.map(result => (

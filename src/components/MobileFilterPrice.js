@@ -7,10 +7,24 @@ import Numeral from './Numeral';
 class MobileMaxPrice extends Component {
   constructor(props) {
     super(props);
+
+    /** Set state with default values.
+     * @param {number} active
+     * @example
+     * { active: 1001 }
+     */
     this.state = { active: 1001 };
+
+    /** Bind sortPrice to filter results by price. */
     this.sortPrice = this.sortPrice.bind(this);
   }
 
+  /**
+   * @function sortPrice Filter results by price
+   * @param {number} value Number to represent de value of price.
+   * @returns Results will be returned with values lower than value passed in the paramenter
+   * and dispatch action to close filter overlay.
+   */
   sortPrice(value) {
     const { dispatch } = this.props;
 

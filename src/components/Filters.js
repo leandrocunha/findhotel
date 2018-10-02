@@ -11,27 +11,52 @@ import MobileFilterPrice from './MobileFilterPrice';
 import MobileFilterRating from './MobileFilterRating';
 import MobileFilterDistance from './MobileFilterDistance';
 
+/** Set Slider to works with tooltip
+ * @external Class
+ * @see {@link https://github.com/react-component/slider#createsliderwithtooltipslider--range--reactcomponent}
+ */
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const SliderTooltip = createSliderWithTooltip(Slider);
 
 class Filters extends Component {
   constructor(props) {
     super(props);
+
+    /** Bind sortDistance to filter results by distance. */
     this.sortDistance = this.sortDistance.bind(this);
+
+    /** Bind sortPrice to filter results by price. */
     this.sortPrice = this.sortPrice.bind(this);
+
+    /** Bind sortRate to filter results by users rate. */
     this.sortRate = this.sortRate.bind(this);
   }
 
+  /**
+   * @function sortDistance Filter results by distance from city center.
+   * @param {number} value Number to represent de value of distance from city center in meters.
+   * @returns Results will be returned with values lower than value passed in the paramenter.
+   */
   sortDistance(value) {
     const { dispatch } = this.props;
     dispatch(actionSortDistance(value));
   }
 
+  /**
+   * @function sortPrice Filter results by price
+   * @param {number} value Number to represent de value of price.
+   * @returns Results will be returned with values lower than value passed in the paramenter.
+   */
   sortPrice(value) {
     const { dispatch } = this.props;
     dispatch(actionSortPrice(value));
   }
 
+  /**
+   * @function sortRate Filter results by rate
+   * @param {number} value Number to represent de value of rate.
+   * @returns Results will be returned with values lower than value passed in the paramenter.
+   */
   sortRate(value) {
     const { dispatch } = this.props;
     dispatch(actionSortRate(value));

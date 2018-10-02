@@ -12,9 +12,18 @@ import Tags from './Tags';
 class Results extends Component {
   constructor(props) {
     super(props);
+
+    /** Bind function to show map in Modal */
     this.showMap = this.showMap.bind(this);
   }
 
+  /**
+   * @function showMap Dispatch action do render Modal with map of result coordinates.
+   * @param {Object} coordinates A object with latitude and longitude of result
+   * @example
+   * const coordinates = {lat: 10, lng: 20};
+   * showMap(coordinates)
+   */
   showMap(coordinates) {
     const { dispatch } = this.props;
     dispatch(mapOpen(coordinates));

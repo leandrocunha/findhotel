@@ -1,3 +1,10 @@
+/**
+ * @function sort - Sort results direction passed in parameter.
+ * @param {string} direction - String to repesent the kind of sort.
+ * @param {Array} arr - Array with results to be sorted.
+ * @returns {Array} Sorted array.
+ * @example sort('best_rating, [{...}, {...}])
+ */
 const sort = (direction, arr) => {
   switch (direction) {
     case 'best_rating':
@@ -20,6 +27,14 @@ const sort = (direction, arr) => {
   }
 };
 
+/**
+ * @function gradeAsText - Translate grade to a string representation.
+ * @param {number} grade - The grade value.
+ * @returns {string} A string representation of grade.
+ * @example
+ * //returns Fabulous
+ * gradeAsText(8)
+ */
 const gradeAsText = (grade) => {
   switch (true) {
     case grade > 8:
@@ -33,6 +48,14 @@ const gradeAsText = (grade) => {
   }
 };
 
+/**
+ * @function slug - Simple function to convert white spaces and hyphen.
+ * @param {string} str - A string with white spaces.
+ * @returns {string} New hyphenized string and in lowercase.
+ * @example
+ * //returns find-hotel
+ * slug('Find Hotel')
+ */
 const slug = str => str.replace(' ', '-').toLowerCase();
 
 export { gradeAsText, slug, sort };

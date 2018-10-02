@@ -5,9 +5,14 @@ import { mapClose } from '../actions/search';
 class Modal extends Component {
   constructor(props) {
     super(props);
+
+    /** Bind function to close modal. */
     this.close = this.close.bind(this);
   }
 
+  /**
+   * @function close Dispatch action and close modal.
+   */
   close() {
     const { dispatch } = this.props;
     dispatch(mapClose());
