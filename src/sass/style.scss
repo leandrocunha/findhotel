@@ -10,6 +10,7 @@ $green: #0c9e1e;
 $orange: #ff5200;
 $orangeDark: #b13d1e;
 $red: #e00000;
+$yellow: #ffb300;
 $white: #fff;
 
 $primary: $blue;
@@ -46,3 +47,4 @@ body {
 @import 'grade';
 @import 'favorite';
 @import 'notifier';
+@import 'mobilefilter';

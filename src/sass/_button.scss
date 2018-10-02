@@ -8,6 +8,7 @@
   font-weight: 700;
   padding: 10px 35px;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 
   &--buy {
     background-color: $orange;
@@ -51,6 +52,62 @@
     img {
       width: 100%;
     }
+  }
+
+  &--mobilefilter {
+    background-color: $white;
+    border: rgba($black, 0.6) 1px solid;
+    border-radius: 4px;
+    color: rgba($black, 0.6);
+    padding: 10px 0;
+    margin: 5px;
+    width: 29%;
+
+    &--orange {
+      &--active {
+        background-color: $orange;
+        border-color: $orange;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $white;
+        border-color: $orange;
+        color: $orange;
+      }
+    }
+
+    &--primary {
+      &--active {
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $white;
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+
+    &--yellow {
+      &--active {
+        background-color: $yellow;
+        border-color: $yellow;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $white;
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
+
+  &--lowercase {
+    text-transform: lowercase;
   }
 
   &:hover {

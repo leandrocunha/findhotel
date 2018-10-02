@@ -7,6 +7,9 @@ import {
   sortPrice as actionSortPrice,
   sortRate as actionSortRate,
 } from '../actions/search';
+import MobileFilterPrice from './MobileFilterPrice';
+import MobileFilterRating from './MobileFilterRating';
+import MobileFilterDistance from './MobileFilterDistance';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const SliderTooltip = createSliderWithTooltip(Slider);
@@ -43,14 +46,17 @@ class Filters extends Component {
           <div className="Filters__Wrapper__Filter">
             <p>Max Price</p>
             <SliderTooltip min={0} max={500} onAfterChange={value => this.sortPrice(value)} />
+            <MobileFilterPrice />
           </div>
           <div className="Filters__Wrapper__Filter">
             <p>Min Rating</p>
             <SliderTooltip min={1} max={5} onAfterChange={value => this.sortRate(value)} />
+            <MobileFilterRating />
           </div>
           <div className="Filters__Wrapper__Filter">
             <p>Distance from city center</p>
             <SliderTooltip min={0} max={1000} onAfterChange={value => this.sortDistance(value)} />
+            <MobileFilterDistance />
           </div>
         </div>
       </div>
