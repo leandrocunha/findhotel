@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { connect } from 'react-redux';
 import * as actions from '../actions/search';
 
 class MobileFilterRating extends Component {
   constructor(props) {
     super(props);
+    this.state = { active: 6 };
     this.sortRate = this.sortRate.bind(this);
   }
 
   sortRate(value) {
     const { dispatch } = this.props;
+
+    this.setState({ active: value });
     dispatch(actions.sortRate(value));
-
-    const wrapper = document.getElementsByClassName('MobileFilter--rating');
-    const buttons = wrapper[0].getElementsByClassName('Button--mobilefilter');
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('Button--mobilefilter--yellow--active');
-      Number(buttons[i].dataset.value) === value
-        && buttons[i].classList.add('Button--mobilefilter--yellow--active');
-    }
-
     dispatch(actions.toggleFilter());
   }
 
   render() {
+    const { active } = this.state;
     return (
       <div className="MobileFilter MobileFilter--rating">
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow Button--mobilefilter--yellow--active"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 6 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={6}
           onClick={() => this.sortRate(6)}
           type="button"
@@ -36,7 +36,12 @@ class MobileFilterRating extends Component {
           Any
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 1 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={1}
           onClick={() => this.sortRate(1)}
           type="button"
@@ -44,7 +49,12 @@ class MobileFilterRating extends Component {
           1
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 2 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={2}
           onClick={() => this.sortRate(2)}
           type="button"
@@ -52,7 +62,12 @@ class MobileFilterRating extends Component {
           2
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 3 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={3}
           onClick={() => this.sortRate(3)}
           type="button"
@@ -60,7 +75,12 @@ class MobileFilterRating extends Component {
           3
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 4 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={4}
           onClick={() => this.sortRate(4)}
           type="button"
@@ -68,7 +88,12 @@ class MobileFilterRating extends Component {
           4
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--yellow"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--yellow',
+            active === 5 && 'Button--mobilefilter--yellow--active',
+          )}
           data-value={5}
           onClick={() => this.sortRate(5)}
           type="button"

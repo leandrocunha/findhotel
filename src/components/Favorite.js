@@ -12,7 +12,6 @@ class Favorite extends Component {
   toggle() {
     const { dispatch } = this.props;
     const { favorite } = this.state;
-    const el = document.getElementsByClassName('Notifier');
 
     this.setState({ favorite: !favorite });
     !favorite && dispatch(actions.notifier('open'));

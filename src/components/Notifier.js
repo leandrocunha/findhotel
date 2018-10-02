@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../actions/search';
@@ -6,6 +7,7 @@ import * as actions from '../actions/search';
 class Notifier extends Component {
   constructor(props) {
     super(props);
+    this.state = { isOpen: false };
     this.close = this.close.bind(this);
   }
 
@@ -15,29 +17,22 @@ class Notifier extends Component {
 
   close() {
     const { dispatch } = this.props;
-    const el = document.getElementsByClassName('Notifier');
-
-    Array.from(el).forEach((item) => {
-      item.classList.remove('Notifier--show');
-    });
-
+    this.setState({ isOpen: false });
     setTimeout(() => dispatch(actions.notifier('close')), 1000);
   }
 
   show() {
     setTimeout(() => {
-      const el = document.getElementsByClassName('Notifier');
-
-      Array.from(el).forEach((item) => {
-        item.classList.add('Notifier--show');
-      });
+      this.setState({ isOpen: true });
     }, 300);
   }
 
   render() {
     const { message, title } = this.props;
+    const { isOpen } = this.state;
+
     return (
-      <div className="Notifier">
+      <div className={classnames('Notifier', isOpen && 'Notifier--show')}>
         <button className="Notifier__Close" onClick={this.close} type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path fill="transparent" d="M0 0h24v24H0z" />

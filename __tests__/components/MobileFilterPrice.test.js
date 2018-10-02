@@ -1,26 +1,27 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-import MobileFilterDistance from '../../src/components/MobileFilterDistance';
+import MobileFilterPrice from '../../src/components/MobileFilterPrice';
 
 const initialState = {};
 
 const mockStore = configureStore();
 const store = mockStore(initialState);
 
-describe('<MobileFilterDistance />', () => {
+describe('<MobileFilterPrice />', () => {
   it('should be exists', () => {
-    const wrapper = shallow(<MobileFilterDistance store={store} />).dive();
+    const wrapper = shallow(<MobileFilterPrice store={store} />).dive();
     expect(wrapper.exists()).toEqual(true);
   });
 
   it('should filter distance', () => {
-    const wrapper = shallow(<MobileFilterDistance store={store} />).dive();
-    const sortDistance = jest.spyOn(wrapper.instance(), 'sortDistance');
+    const wrapper = shallow(<MobileFilterPrice store={store} />).dive();
+    const sortPrice = jest.spyOn(wrapper.instance(), 'sortPrice');
 
+    wrapper.instance().forceUpdate();
     wrapper.find('.Button').forEach((component) => {
       component.simulate('click');
-      expect(sortDistance).toBeCalled();
+      expect(sortPrice).toBeCalled();
     });
   });
 });

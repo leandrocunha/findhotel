@@ -18,6 +18,7 @@ describe('<Favorite />', () => {
     const wrapper = shallow(<Favorite store={store} />).dive();
     const toggle = jest.spyOn(wrapper.instance(), 'toggle');
 
+    wrapper.instance().forceUpdate();
     wrapper.find('.Favorite__Button').simulate('click');
     expect(toggle).toBeCalled();
   });

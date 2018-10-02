@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { connect } from 'react-redux';
 import * as actions from '../actions/search';
 import Numeral from './Numeral';
@@ -6,30 +7,29 @@ import Numeral from './Numeral';
 class MobileMaxPrice extends Component {
   constructor(props) {
     super(props);
+    this.state = { active: 1001 };
     this.sortPrice = this.sortPrice.bind(this);
   }
 
   sortPrice(value) {
     const { dispatch } = this.props;
+
+    this.setState({ active: value });
     dispatch(actions.sortPrice(value));
-
-    const wrapper = document.getElementsByClassName('MobileFilter--price');
-    const buttons = wrapper[0].getElementsByClassName('Button--mobilefilter');
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('Button--mobilefilter--primary--active');
-      Number(buttons[i].dataset.value) === value
-        && buttons[i].classList.add('Button--mobilefilter--primary--active');
-    }
-
     dispatch(actions.toggleFilter());
   }
 
   render() {
+    const { active } = this.state;
     return (
       <div className="MobileFilter MobileFilter--price">
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary Button--mobilefilter--primary--active"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 1001 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={1001}
           onClick={() => this.sortPrice(1001)}
           type="button"
@@ -37,7 +37,12 @@ class MobileMaxPrice extends Component {
           Any
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 100 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={100}
           onClick={() => this.sortPrice(100)}
           type="button"
@@ -45,7 +50,12 @@ class MobileMaxPrice extends Component {
           <Numeral value={100} />
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 200 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={200}
           onClick={() => this.sortPrice(200)}
           type="button"
@@ -53,7 +63,12 @@ class MobileMaxPrice extends Component {
           <Numeral value={200} />
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 300 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={300}
           onClick={() => this.sortPrice(300)}
           type="button"
@@ -61,7 +76,12 @@ class MobileMaxPrice extends Component {
           <Numeral value={300} />
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 400 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={400}
           onClick={() => this.sortPrice(400)}
           type="button"
@@ -69,7 +89,12 @@ class MobileMaxPrice extends Component {
           <Numeral value={400} />
         </button>
         <button
-          className="Button Button--mobilefilter Button--mobilefilter--primary"
+          className={classnames(
+            'Button',
+            'Button--mobilefilter',
+            'Button--mobilefilter--primary',
+            active === 1000 && 'Button--mobilefilter--primary--active',
+          )}
           data-value={1000}
           onClick={() => this.sortPrice(1000)}
           type="button"
