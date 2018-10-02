@@ -2,6 +2,8 @@ const mapClose = () => ({ type: 'SEARCH/MAP/CLOSE' });
 
 const mapOpen = coordinates => ({ type: 'SEARCH/MAP/OPEN', data: coordinates });
 
+const notifier = state => ({ type: 'SEARCH/NOTIFIER', data: state });
+
 const results = () => ({ type: 'SEARCH/RESULTS' });
 
 const search = () => ({ type: 'SEARCH' });
@@ -19,6 +21,7 @@ const toggleFilter = () => ({ type: 'SEARCH/FILTER' });
 export {
   mapClose,
   mapOpen,
+  notifier,
   results,
   search,
   sort,

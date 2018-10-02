@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as actions from '../actions/search';
 
 class Notifier extends Component {
   constructor(props) {
@@ -18,11 +20,14 @@ class Notifier extends Component {
   }
 
   close() {
+    const { dispatch } = this.props;
     const el = document.getElementsByClassName('Notifier');
 
     Array.from(el).forEach((item) => {
       item.classList.remove('Notifier--show');
     });
+
+    setTimeout(() => dispatch(actions.notifier('close')), 1000);
   }
 
   render() {
@@ -50,4 +55,4 @@ Notifier.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Notifier;
+export default connect()(Notifier);

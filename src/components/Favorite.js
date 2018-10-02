@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import Notifier from './Notifier';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions/search';
 
 class Favorite extends Component {
   constructor(props) {
@@ -9,8 +10,12 @@ class Favorite extends Component {
   }
 
   toggle() {
+    const { dispatch } = this.props;
     const { favorite } = this.state;
+    const el = document.getElementsByClassName('Notifier');
+
     this.setState({ favorite: !favorite });
+    !favorite && dispatch(actions.notifier('open'));
   }
 
   render() {
@@ -33,12 +38,9 @@ class Favorite extends Component {
             />
           )}
         </button>
-        {favorite && (
-          <Notifier title="Congratulations!" message="Now this hotel is in your favorite list." />
-        )}
       </div>
     );
   }
 }
 
-export default Favorite;
+export default connect()(Favorite);

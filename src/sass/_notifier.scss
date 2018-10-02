@@ -12,6 +12,11 @@
   width: 350px;
   z-index: 50;
 
+  @media screen and (max-width: $tablet) {
+    width: 80%;
+    padding: 10px;
+  }
+
   &--show {
     right: 10px;
   }

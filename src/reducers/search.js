@@ -32,6 +32,9 @@ const search = (state = initialState, { type, data }) => {
     case 'SEARCH/FILTER':
       return { ...state, filter: !state.filter };
 
+    case 'SEARCH/NOTIFIER':
+      return { ...state, notifier: data === 'open' };
+
     default:
       return state;
   }

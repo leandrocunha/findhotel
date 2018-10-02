@@ -5,6 +5,7 @@ import Filters from './Filters';
 import GMaps from './GMaps';
 import Loading from './Loading';
 import Modal from './Modal';
+import Notifier from './Notifier';
 import Results from './Results';
 import Sort from './Sort';
 
@@ -30,7 +31,9 @@ class App extends Component {
   }
 
   render() {
-    const { loading, results, map } = this.props;
+    const {
+      loading, notifier, results, map,
+    } = this.props;
     return (
       <Fragment>
         <header className="Header">
@@ -46,6 +49,9 @@ class App extends Component {
           <Modal>
             <GMaps isMarkerShown {...map.coordinates} />
           </Modal>
+        )}
+        {notifier && (
+          <Notifier title="Congratulations!" message="Now this hotel is in your favorite list." />
         )}
       </Fragment>
     );
