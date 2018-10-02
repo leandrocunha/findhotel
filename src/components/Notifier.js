@@ -10,13 +10,7 @@ class Notifier extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      const el = document.getElementsByClassName('Notifier');
-
-      Array.from(el).forEach((item) => {
-        item.classList.add('Notifier--show');
-      });
-    }, 300);
+    this.show();
   }
 
   close() {
@@ -28,6 +22,16 @@ class Notifier extends Component {
     });
 
     setTimeout(() => dispatch(actions.notifier('close')), 1000);
+  }
+
+  show() {
+    setTimeout(() => {
+      const el = document.getElementsByClassName('Notifier');
+
+      Array.from(el).forEach((item) => {
+        item.classList.add('Notifier--show');
+      });
+    }, 300);
   }
 
   render() {

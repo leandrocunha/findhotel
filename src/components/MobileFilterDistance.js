@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/search';
 
+const wrapper = document.getElementsByClassName('MobileFilter--distance');
+const buttons = wrapper[0].getElementsByClassName('Button--mobilefilter');
+
 class MobileFilterDistance extends Component {
   constructor(props) {
     super(props);
@@ -11,9 +14,6 @@ class MobileFilterDistance extends Component {
   sortDistance(value) {
     const { dispatch } = this.props;
     dispatch(actions.sortDistance(value));
-
-    const wrapper = document.getElementsByClassName('MobileFilter--distance');
-    const buttons = wrapper[0].getElementsByClassName('Button--mobilefilter');
 
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].classList.remove('Button--mobilefilter--orange--active');

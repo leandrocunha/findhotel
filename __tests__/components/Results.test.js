@@ -17,12 +17,12 @@ describe('<Results />', () => {
   });
 
   it('should list mock results', () => {
-    const wrapper = mount(<Results store={store} results={mock} />);
+    const wrapper = shallow(<Results store={store} results={mock} />).dive();
     expect(wrapper.find('.Results__Result').length).toEqual(mock.length);
   });
 
   it('should show greatDeal', () => {
-    const wrapper = mount(<Results store={store} results={mock} />);
+    const wrapper = shallow(<Results store={store} results={mock} />).dive();
     expect(
       wrapper
         .setProps({ greatDeal: true })

@@ -14,27 +14,27 @@ const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const SliderTooltip = createSliderWithTooltip(Slider);
 
 describe('<Filters />', () => {
-  it('should render Filters component', () => {
-    const wrapper = mount(<Filters store={store} />);
-    expect(wrapper.find(Filters).length).toEqual(1);
+  it('should be exists', () => {
+    const wrapper = shallow(<Filters store={store} />).dive();
+    expect(wrapper.exists()).toEqual(true);
   });
 
   it('should sort price', () => {
     const wrapper = shallow(<Filters store={store} />).dive();
-    const sortPrice = jest.spyOn(wrapper.instance(), 'sortPrice');
+    const anonymous = jest.fn();
+    const createSliderWithTooltip = Slider.createSliderWithTooltip;
+    const SliderTooltip = createSliderWithTooltip(Slider);
     const range = [10, 20];
 
     wrapper.instance().forceUpdate();
 
-    console.log(wrapper.instance());
-
     wrapper
-      .find('.Filters__Wrapper')
-      .first('.Filters__Wrapper__Filter')
-      .first(SliderTooltip)
-      .simulate('change', range);
-
-    expect(sortPrice).toBeCalledWith(range);
+      .find('Filters')
+      .find('Filters__Wrapper')
+      .find('Filters__Wrapper__Filter')
+      .find(SliderTooltip)
+      .simulate('afterChange', range);
+    // expect(anonymous).toBeCalled();
 
     // wrapper
     //   .find(Slider)

@@ -56,4 +56,13 @@ describe('<App />', () => {
     wrapper.setProps({ map: { show: true, coordinates: { ...mock[0].coordinates } } });
     expect(wrapper.find(Modal).length).toEqual(1);
   });
+
+  it('should toogle filter in mobile', () => {
+    const wrapper = shallow(<App store={store} {...initialState} />).dive();
+    const toggleFilter = jest.spyOn(wrapper.instance(), 'toggleFilter');
+
+    wrapper.instance().forceUpdate();
+    wrapper.find('.Button').simulate('click');
+    expect(toggleFilter).toBeCalled();
+  });
 });

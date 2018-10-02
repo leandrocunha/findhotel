@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { search, sort } from '../actions/search';
 
 const customStyles = {
-  option: (base, state) => ({
+  option: base => ({
     ...base,
     cursor: 'pointer',
     borderBottom: '1px solid rgba(0,0,0,.1)',
@@ -26,7 +26,7 @@ const customStyles = {
     color: '#fff',
     fontSize: '14px',
   }),
-  singleValue: (base, state) => ({
+  singleValue: () => ({
     color: '#fff',
     cursor: 'pointer',
   }),
