@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import Slider from 'rc-slider';
 import { connect } from 'react-redux';
 import {
@@ -90,5 +91,13 @@ class Filters extends Component {
 }
 
 const mapStateToProps = state => state;
+
+Filters.defaultProps = {
+  filter: false,
+};
+
+Filters.propTypes = {
+  filter: PropTypes.bool,
+};
 
 export default connect(mapStateToProps)(Filters);
