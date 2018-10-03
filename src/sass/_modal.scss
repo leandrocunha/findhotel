@@ -8,9 +8,15 @@
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 4;
 
   &__Body {
     height: 70%;
     width: 70%;
+
+    @media screen and (max-width: $tablet) {
+      height: 80%;
+      width: 80%;
+    }
   }
 }
