@@ -3,11 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Slider from 'rc-slider';
 import { connect } from 'react-redux';
-import {
-  sortDistance as actionSortDistance,
-  sortPrice as actionSortPrice,
-  sortRate as actionSortRate,
-} from '../actions/search';
+import * as actions from '../actions/search';
 import MobileFilterPrice from './MobileFilterPrice';
 import MobileFilterRating from './MobileFilterRating';
 import MobileFilterDistance from './MobileFilterDistance';
@@ -22,6 +18,15 @@ const SliderTooltip = createSliderWithTooltip(Slider);
 class Filters extends Component {
   constructor(props) {
     super(props);
+
+    /** Set state with default values.
+     * @param {number} distance
+     * @param {number} price
+     * @param {number} rate
+     * @example
+     * { distance: 0, price: 0, rate: 0 }
+     */
+    this.state = { distance: 0, price: 0, rate: 0 };
 
     /** Bind sortDistance to filter results by distance. */
     this.sortDistance = this.sortDistance.bind(this);
@@ -40,7 +45,13 @@ class Filters extends Component {
    */
   sortDistance(value) {
     const { dispatch } = this.props;
-    dispatch(actionSortDistance(value));
+    const { distance } = this.state;
+    this.setState({ distance: value });
+
+    if (value !== distance) {
+      dispatch(actions.search());
+      setTimeout(() => dispatch(actions.sortDistance(value)), 1000);
+    }
   }
 
   /**
@@ -50,7 +61,14 @@ class Filters extends Component {
    */
   sortPrice(value) {
     const { dispatch } = this.props;
-    dispatch(actionSortPrice(value));
+    const { price } = this.state;
+
+    this.setState({ price: value });
+
+    if (value !== price) {
+      dispatch(actions.search());
+      setTimeout(() => dispatch(actions.sortPrice(value)), 1000);
+    }
   }
 
   /**
@@ -60,7 +78,14 @@ class Filters extends Component {
    */
   sortRate(value) {
     const { dispatch } = this.props;
-    dispatch(actionSortRate(value));
+    const { rate } = this.state;
+
+    this.setState({ rate: value });
+
+    if (value !== rate) {
+      dispatch(actions.search());
+      setTimeout(() => dispatch(actions.sortRate(value)), 1000);
+    }
   }
 
   render() {

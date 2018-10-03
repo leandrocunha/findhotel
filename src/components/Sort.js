@@ -21,7 +21,7 @@ const customStyles = {
     display: 'flex',
     margin: '0 10px',
     padding: '0 10px',
-    width: 180,
+    width: 187,
   }),
   placeholder: () => ({
     color: '#fff',
@@ -55,9 +55,7 @@ class Sort extends Component {
    */
   sort(opt) {
     const { dispatch } = this.props;
-
-    dispatch(search());
-    setTimeout(() => dispatch(sort(opt)), 1000);
+    dispatch(sort(opt));
   }
 
   render() {

@@ -12,16 +12,16 @@ const search = (state = initialState, { type, data }) => {
       return { loading: false, results };
 
     case 'SEARCH/SORT':
-      return { loading: false, results: sort(data, results) };
+      return { loading: false, results: [...sort(data, state.results)] };
 
     case 'SEARCH/DISTANCE':
-      return { ...state, results: results.filter(r => r.distance <= data) };
+      return { ...state, loading: false, results: results.filter(r => r.distance <= data) };
 
     case 'SEARCH/PRICE':
-      return { ...state, results: results.filter(r => r.price <= data) };
+      return { ...state, loading: false, results: results.filter(r => r.price <= data) };
 
     case 'SEARCH/RATE':
-      return { ...state, results: results.filter(r => r.rating <= data) };
+      return { ...state, loading: false, results: results.filter(r => r.rating <= data) };
 
     case 'SEARCH/MAP/OPEN':
       return { ...state, map: { show: true, coordinates: data } };
